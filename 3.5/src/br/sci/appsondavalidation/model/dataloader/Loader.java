@@ -299,7 +299,7 @@ public class Loader {
 		try (PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(output)))) {
 			for (int i= 0; i< data.length; i++) {
 				
-				// Cabeçalho
+				// Cabe�alho
 				out.printf("%s;", id);
 				out.printf("%.0f;", data[i][1]);
 				out.printf("%.0f;", data[i][2]);
@@ -475,7 +475,7 @@ public class Loader {
 				else if (code[i][24] == -5555)
 					out.print("N/S;");
 				
-				// Direção
+				// Dire��o
 				if (code[i][25] == 999)
 					out.printf("%d\n", code[i][25]);
 				else if (code[i][25] == 559)
@@ -649,7 +649,7 @@ public class Loader {
 	            		cont_nalw++;
 	            	}
 	            	
-	            	if ((code[i][32] != 3333) && (code[i][32] != -6999)) {
+	            	if ((code[i][8] != 3333) && (code[i][8] != -6999)) {
 	            		cont_vlw++;
 	            	}
 	            	
@@ -698,7 +698,7 @@ public class Loader {
 				else if (code[i][21] == 3333)
 					cont_huna++;
 				
-				// Pressão Atmosférica
+				// Pressão Atmosf�rica
 				if (code[i][22] == 99)
 					cont_psv++;
 				else if (code[i][22] == 559)
@@ -744,7 +744,7 @@ public class Loader {
 				else if (code[i][24] == 3333)
 					cont_wsna++;
 				
-				// Direção do Vento
+				// Dire��o do Vento
 				if (code[i][25] == 999)
 					cont_wdv++;
 				else if (code[i][25] == 559)
@@ -815,7 +815,7 @@ public class Loader {
 			med_huna = (double)(cont_huna * 100) / numberOfRows;
 			med_huv  = (double)(cont_huv * 100)  / numberOfRows;
 				
-			// Percentuais Pressão Atmosférica
+			// Percentuais Pressão Atmosf�rica
 			med_ps1n = (double)(cont_ps1n * 100) / numberOfRows;
 			med_ps2n = (double)(cont_ps2n * 100) / numberOfRows;
 			med_psna = (double)(cont_psna * 100) / numberOfRows;
@@ -835,7 +835,7 @@ public class Loader {
 			med_wsna = (double)(cont_wsna * 100) / numberOfRows;
 			med_wsv  = (double)(cont_wsv * 100)  / numberOfRows;
 			
-			// Percentuais Direção do Vento
+			// Percentuais Dire��o do Vento
 			med_wd1n = (double)(cont_wd1n * 100) / numberOfRows;
 			med_wd2n = (double)(cont_wd2n * 100) / numberOfRows;
 			med_wd3n = (double)(cont_wd3n * 100) / numberOfRows;
