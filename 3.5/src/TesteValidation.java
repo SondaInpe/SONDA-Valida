@@ -71,7 +71,7 @@ public class TesteValidation {
 				infoData.setMonth(fileNames[i].substring(5, 7));
 				infoData.setYear("20" + fileNames[i].substring(3, 5));
 			} else if (fileNames[i].substring(0, 3).equals("CPA")) {
-			    infoData.setId("13");
+			    infoData.setId("30");
 				infoData.setInputData(file.getAbsolutePath());
 				infoData.setOutputData(fileNames[i].substring(0, 7) + "ED.csv");
 				infoData.setOutputCode(fileNames[i].substring(0, 7) + "ED_DQC.csv");
